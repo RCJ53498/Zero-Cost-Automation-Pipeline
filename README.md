@@ -6,6 +6,10 @@ This assignment builds a zero-cost automation layer that takes conversational tr
 
 To comply exactly with the "zero spend" limits and entirely prevent AI-Vendor API rate-limiting issues, this build delegates all parsing to a **local open-source hardware LLM (`llama3.2`) via Ollama**.
 
+## Demonstration Video
+
+Watch the end-to-end pipeline demonstration here: [Clara Pipeline Demo (Loom)](https://drive.google.com/file/d/1CY2x7lxrp4hRZs1J1y6U_92q01beVZdf/view?usp=drive_link)
+
 ### The Pipeline Architecture
 
 - **Inputs**: Conversational transcripts from Demo (Pipeline A) and Onboarding (Pipeline B) calls. Stored locally in `data/`.
