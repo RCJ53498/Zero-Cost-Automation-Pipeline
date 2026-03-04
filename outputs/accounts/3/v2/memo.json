@@ -1,0 +1,38 @@
+{
+  "company_name": "Sprinkler and Alarm Contractor",
+  "business_hours": {
+    "days": "Monday to Friday",
+    "start": "07:00",
+    "end": "18:00",
+    "timezone": "CST"
+  },
+  "office_address": "123 Main St, Anytown, USA",
+  "services_supported": [
+    "Commercial property safety systems",
+    "Alarm monitoring"
+  ],
+  "emergency_definition": [
+    "Frozen/burst sprinkler pipes in winter",
+    "Active flooding",
+    "Panel displaying 'FIRE' or 'TROUBLE'"
+  ],
+  "emergency_routing_rules": {
+    "behavior": "Transfer to emergency queue (555-8811)",
+    "transfer_number": "1",
+    "fallback": "Duty manager (555-8822)"
+  },
+  "non_emergency_routing_rules": "Schedule routine maintenance requests for next business day",
+  "call_transfer_rules": {
+    "timeout_seconds": 30,
+    "retries": 1,
+    "failure_message": "Please try again later"
+  },
+  "integration_constraints": "ServiceTrade integration must be live before Clara deployment",
+  "after_hours_flow_summary": "Automated dispatch updates during winter storm events",
+  "office_hours_flow_summary": "Human operator handling during business hours",
+  "questions_or_unknowns": [
+    "What is the expected SLA for commercial clients?"
+  ],
+  "notes": "Outdated CRM, moving to ServiceTrade soon",
+  "account_id": "3"
+}

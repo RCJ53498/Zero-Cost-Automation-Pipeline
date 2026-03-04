@@ -1,0 +1,36 @@
+{
+  "company_name": "Ben Penoyer's Electrical Business",
+  "business_hours": {
+    "days": "Monday to Friday",
+    "start": "08:00",
+    "end": "17:00",
+    "timezone": "Pacific Time Zone"
+  },
+  "office_address": "123 Main St, Anytown, USA",
+  "services_supported": [
+    "Residential Electrical Work",
+    "Commercial Electrical Work"
+  ],
+  "emergency_definition": [
+    "Electrician on Call for Emergencies"
+  ],
+  "emergency_routing_rules": {
+    "behavior": "Transfer to on-call electrician",
+    "transfer_number": "555-1234",
+    "fallback": "Leave voicemail"
+  },
+  "non_emergency_routing_rules": "Route to designated electrician",
+  "call_transfer_rules": {
+    "timeout_seconds": 30,
+    "retries": 1,
+    "failure_message": "Leave voicemail"
+  },
+  "integration_constraints": "Integration with Jobber CRM is currently in progress",
+  "after_hours_flow_summary": "Ben is on call for emergencies during business hours",
+  "office_hours_flow_summary": "Business hours are Monday to Friday, 8am to 5pm",
+  "questions_or_unknowns": [
+    "What is the expected timeline for the integration with Jobber CRM?"
+  ],
+  "notes": "Ben is looking for a system that can handle multiple simultaneous calls during busy times",
+  "account_id": "1"
+}

@@ -1,0 +1,23 @@
+Onboarding Call: HVAC and Facility Maintenance
+Customer Background
+Mike Torres preparing for the summer AC rush. Focusing strictly on lead capture and emergency HVAC routing.
+
+Configuration Setup
+Business Hours and Routing (05:00 - 15:00)
+Standard hours: 8 AM - 8 PM daily.
+Emergency Definition: High indoor temperatures with elderly residents, or complete commercial chiller failure.
+Emergency Strategy: Immediate routing to the summer on-call dispatcher (555-4433).
+Non-Emergency Strategy: Capture name, address, unit make/model, and push to the custom CRM for scheduling.
+Integration Details (16:00 - 25:00)
+Custom webhook finalized. Clara pushes JSON payloads directly to Mike's system.
+
+Testing & Validation
+Call Testing (30:00 - 45:00)
+Ran a mock call acting as a freezing homeowner in winter. Clara successfully identified it was out of season and handled it gracefully.
+Tested the API payload injection. Data appears perfectly in Mike's dashboard.
+
+Action items
+Mike Torres
+Push the "Go Live" button on their telecom portal to port the main number over.
+Bharat
+Monitor the first 100 calls manually to ensure the custom webhook doesn't drop any leads.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

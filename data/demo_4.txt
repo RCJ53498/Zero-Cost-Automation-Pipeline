@@ -1,0 +1,36 @@
+Customer Background
+Mike Torres (02:00 - 05:00)
+Runs a well-established HVAC company. Deals with both residential and commercial units.
+Business Operations (06:00 - 09:00)
+Very seasonal business. Overwhelmed in peak summer (AC out) and peak winter (furnaces down).
+Call Management (10:00 - 13:00)
+Loses leads when callers go to voicemail during peak summer days. Needs virtual assistant to capture every lead.
+
+Deal information
+Industry Overview (14:00 - 17:00)
+HVAC installation, repair, and ongoing preventative maintenance.
+Uses a custom legacy CRM and ServiceTrade for commercial clients.
+Trial Plan Details (35:00 - 38:00)
+Agreed to start with a flat-rate plan for 1000 minutes during the summer rush.
+Integration Status (18:00 - 22:00)
+Needs API access to connect Clara to their custom internal dashboard.
+
+Need
+Call Automation (23:00 - 28:00)
+Virtual receptionist to qualify leads: ask for make/model of the AC, age of unit, and if there are elderly/medical needs in the home (escalates priority).
+Call Handling Capacity (29:00 - 31:00)
+Zero hold times for callers. Every call answered on the first ring.
+Follow-up and Notifications (32:00 - 34:00)
+Send an SMS with a booking link if an appointment isn't booked directly on the call.
+
+Timeline
+Contract Signing and Kickoff (40:00 - 42:00)
+Fast-tracking signature to get live before June.
+⏳ Onboarding Process (43:00 - 45:00)
+Wants an accelerated 1-week setup just for inbound lead capture.
+
+Action items
+Mike Torres
+Send the API endpoint documentation for their custom CRM.
+Bharat
+Assign a dedicated engineer to write the custom webhook for Mike's system.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

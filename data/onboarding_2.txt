@@ -1,0 +1,24 @@
+Onboarding Call: Fire Protection Company
+Customer Background
+Review of Jason's goals to fully automate after-hours calls and integrate with ServiceTrade.
+
+Configuration Setup
+Business Hours and Routing (10:00 - 15:00)
+Standard hours: 8 AM - 5 PM EST, Mon-Fri.
+Emergency Definition: Active fire alarm triggered, suppression system dump, or immediate safety hazard.
+Emergency Strategy: During hours, transfer to dispatch. After hours, transfer straight to the on-call technician (555-0999).
+Non-Emergency Strategy: For routine inspections, log a ticket in ServiceTrade and schedule a follow-up call.
+Integration Specifics (16:30 - 22:00)
+ServiceTrade integration set up. Clara will tag tickets as "URGENT" for emergencies.
+
+Testing & Validation
+Call Testing (25:00 - 35:00)
+Tested a mock "fire alarm triggered" call. Clara successfully routed to the on-call number.
+Tested a "need annual inspection" call. Clara logged it correctly without transferring.
+
+Action items
+Jason Miller
+Update on-call roster in Clara's external spreadsheet integration.
+Bharat
+Monitor initial weekend for any dropped emergency calls.
+Ensure ServiceTrade Webhooks are properly acknowledging tickets.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

@@ -1,0 +1,24 @@
+Onboarding Call: Ben Penoyer (Electrical Services)
+Customer Background
+Kickoff call following the signing of the initial demo contract for Ben's electrical business.
+
+Configuration Setup
+Business Hours and Routing (05:00 - 15:00)
+Standard hours: 8:00 AM to 6:00 PM EST, Mon-Fri.
+Emergency Definition: Complete power loss, sparking panels, or exposed live wires.
+Emergency Strategy: Page Ben directly at 555-7766, regardless of the time of day.
+Non-Emergency Strategy: For routine residential or commercial quotes, capture all details and schedule a callback or an onsite estimate using Jobber.
+Integration Details (18:00 - 22:00)
+Jobber CRM integration is actively being configured. For now, Clara will email detailed transcripts and lead info directly to Ben's admin email.
+
+Testing & Validation
+Call Testing (25:00 - 35:00)
+Ben acted as a homeowner with a sparking outlet. Clara correctly classified it as an emergency and initiated the transfer to the emergency number.
+Tested handling of simultaneous calls. Clara placed Ben in a polite hold queue when simulating high volume.
+
+Action items
+Ben Penoyer
+Finalize his upcoming week's schedule so Clara can accurately book estimates.
+Bharat
+Complete the Jobber integration mapping and run a test payload by Thursday.
+Review the call transcripts from the testing phase to tweak Clara's technical vocabulary.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

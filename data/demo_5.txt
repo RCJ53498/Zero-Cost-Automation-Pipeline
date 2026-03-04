@@ -1,0 +1,38 @@
+Customer Background
+Emily Chen (03:00 - 06:00)
+VP of Operations for a large commercial facility maintenance firm.
+Manages cleaning, electrical, plumbing, and general repairs for retail chains.
+Business Operations (07:00 - 11:00)
+Highly complex operations. Over 50 subgroups of contractors.
+Call Management (12:00 - 16:00)
+Currently using a massive offshore call center. Looking to replace level-1 triage with AI to reduce costs and improve accuracy.
+
+Deal information
+Industry Overview (17:00 - 22:00)
+B2B facility management. High volume, low margin, requires extreme efficiency.
+Uses ServiceTrade heavily for all vendor management.
+Trial Plan Details (45:00 - 50:00)
+Enterprise custom plan. Starting with a single region (Midwest) pilot.
+Integration Status (23:00 - 28:00)
+Requires deep ServiceTrade integration. Must pull contractor availability in real-time.
+
+Need
+Call Automation (30:00 - 35:00)
+Clara must authenticate the store manager calling in via store ID.
+Must categorize the maintenance request (e.g., plumbing vs electrical) and route to the correct sub-contractor pool.
+Call Handling Capacity (36:00 - 38:00)
+Must handle spikes during extreme weather events across multiple states.
+Follow-up and Notifications (39:00 - 42:00)
+Automated status updates: "Vendor is en route. ETA 45 minutes."
+
+Timeline
+Contract Signing and Kickoff (55:00 - 58:00)
+Long sales cycle. Finally signed today.
+⏳ Onboarding Process (59:00 - 01:05:00)
+Extensive 6-week onboarding with weekly milestone reviews.
+
+Action items
+Emily Chen
+Provide database of store IDs for the authentication module.
+Bharat
+Provide architecture diagram for the ServiceTrade real-time availability sync.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

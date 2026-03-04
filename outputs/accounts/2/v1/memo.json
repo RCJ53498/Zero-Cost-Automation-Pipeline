@@ -1,0 +1,37 @@
+{
+  "company_name": "Fire Protection Services",
+  "business_hours": {
+    "days": "Monday to Friday",
+    "start": "08:00",
+    "end": "17:00",
+    "timezone": "UTC-05:00"
+  },
+  "office_address": "123 Main St, Anytown, USA",
+  "services_supported": [
+    "Fire extinguisher inspections",
+    "Emergency suppression system triggers"
+  ],
+  "emergency_definition": [
+    "Fire alarm triggered",
+    "Suppression system malfunction"
+  ],
+  "emergency_routing_rules": {
+    "behavior": "Route to on-call technician's cell phone",
+    "transfer_number": "None",
+    "fallback": "None"
+  },
+  "non_emergency_routing_rules": "Routine inspections to technician's cell phone",
+  "call_transfer_rules": {
+    "timeout_seconds": 30,
+    "retries": 1,
+    "failure_message": "No response from technician"
+  },
+  "integration_constraints": "Seamless integration with ServiceTrade for automatic logging of emergency triggers and scheduling of inspections",
+  "after_hours_flow_summary": "None",
+  "office_hours_flow_summary": "None",
+  "questions_or_unknowns": [
+    "What is the expected volume of emergency calls during peak hours?"
+  ],
+  "notes": "Trial period for 2 months before committing to annual plan",
+  "account_id": "2"
+}

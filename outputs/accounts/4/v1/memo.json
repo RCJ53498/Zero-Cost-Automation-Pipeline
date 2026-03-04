@@ -1,0 +1,36 @@
+{
+  "company_name": "HVAC Company",
+  "business_hours": {
+    "days": "Monday to Friday",
+    "start": "02:00",
+    "end": "05:00",
+    "timezone": "UTC-5"
+  },
+  "office_address": "123 Main St, Anytown, USA",
+  "services_supported": [
+    "Residential HVAC",
+    "Commercial HVAC"
+  ],
+  "emergency_definition": [
+    "Critical AC failure"
+  ],
+  "emergency_routing_rules": {
+    "behavior": "Escalate to priority",
+    "transfer_number": "1",
+    "fallback": "None"
+  },
+  "non_emergency_routing_rules": "None",
+  "call_transfer_rules": {
+    "timeout_seconds": 30,
+    "retries": 1,
+    "failure_message": "No answer"
+  },
+  "integration_constraints": "API access to connect Clara to custom internal dashboard",
+  "after_hours_flow_summary": "None",
+  "office_hours_flow_summary": "None",
+  "questions_or_unknowns": [
+    "What is the expected API access timeline?"
+  ],
+  "notes": "None",
+  "account_id": "4"
+}

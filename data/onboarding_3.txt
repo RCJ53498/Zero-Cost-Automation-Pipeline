@@ -1,0 +1,23 @@
+Onboarding Call: Sprinkler and Alarm Contractors
+Customer Background
+Aligning with Sarah on the final stages before full deployment alongside their new ServiceTrade CRM.
+
+Configuration Setup
+Business Hours and Routing (05:00 - 12:00)
+Standard hours: 7 AM - 6 PM CST.
+Emergency Definition: Burst pipes, active flooding, panel displaying "FIRE" or "TROUBLE".
+Emergency Strategy: 24/7 transfer to the emergency queue (555-8811). If unanswered, escalate to the duty manager (555-8822).
+Non-Emergency Strategy: Beeping panels (low battery) or routine maintenance requests are scheduled for the next business day.
+System Constraints (15:00 - 20:00)
+Clara must not promise ETA to clients. Must say "A technician will be dispatched as soon as possible."
+
+Testing & Validation
+Call Testing (25:00 - 40:00)
+Simulated a mass-freeze event with 5 simultaneous calls. All categorized and escalated properly.
+Verified that ServiceTrade API creates emergency work orders automatically.
+
+Action items
+Sarah Jenkins
+Train field staff on receiving automated texts from Clara.
+Bharat
+Finalize the fallback failure message in case ServiceTrade API is down.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

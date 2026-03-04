@@ -1,0 +1,45 @@
+Customer Background
+Jason Miller's Experience (02:10 - 05:40)
+Owner of a Fire Protection company with 15 years in the industry.
+Handles fire extinguisher inspections, emergency suppression system triggers, and routine maintenance.
+Business Operations (06:05 - 08:00)
+Operates with 8 technicians in the field and a small front office team.
+Struggling to keep up with emergency calls during high-volume periods or after hours.
+Call Management (09:15 - 12:00)
+Critical need for handling emergency calls immediately (e.g., fire alarm triggered, suppression system malfunction).
+Missed calls could mean severe property damage or safety code violations.
+
+Deal information
+Industry Overview (12:30 - 15:45)
+Fire protection services for commercial buildings and restaurants.
+Using ServiceTrade for scheduling and dispatching.
+Trial Plan Details (45:20 - 48:00)
+Interested in the Clara AI basic plan to handle overflow volume.
+Wants to trial for two months before committing to annual.
+Integration Status (16:00 - 18:20)
+Requires seamless integration with ServiceTrade to automatically log emergency triggers and schedule inspections.
+
+Need
+Call Automation (20:10 - 25:00)
+Needs 24/7 coverage to catch every emergency call.
+Routing must distinguish between a routine inspection request and an active fire alarm or system dump.
+Call Handling Capacity (26:00 - 28:00)
+Must be able to route active emergencies to an on-call technician's cell phone immediately, while handling multiple non-emergency inquiries simultaneously.
+Follow-up and Notifications (30:00 - 32:00)
+Immediate SMS notification to the operations manager for any emergency.
+Automate reminders for upcoming annual fire inspections.
+
+Timeline
+Contract Signing and Kickoff (50:15 - 52:00)
+Verbal agreement on the call, contract to be reviewed by their legal team by end of week.
+Kickoff planned for next Monday.
+⏳ Onboarding Process (53:00 - 55:00)
+Requires dedicated mapping of emergency protocols during onboarding.
+
+Action items
+Jason Miller
+Review and sign contract by Friday.
+Provide current after-hours routing flow details.
+Bharat
+Send contract for legal review.
+Provide ServiceTrade integration docs to Jason's IT guy.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

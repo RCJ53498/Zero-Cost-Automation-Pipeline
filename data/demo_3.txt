@@ -1,0 +1,39 @@
+Customer Background
+Sarah Jenkins (01:20 - 04:30)
+Operations Director for a regional Sprinkler and Alarm Contractor.
+Deals with installation, monitoring, and emergency repair of both wet and dry sprinkler systems.
+Business Operations (05:00 - 08:30)
+Fast-growing team with 15 field operators. Lots of commercial clients, meaning high SLA demands.
+Call Management (10:00 - 14:00)
+Gets hit hard by weather-related emergencies (frozen/burst sprinkler pipes in winter).
+Current answering service is entirely human but lacks basic technical understanding, leading to misclassified priorities.
+
+Deal information
+Industry Overview (15:00 - 18:00)
+Commercial property safety systems and alarm monitoring follow-ups.
+Currently struggling with an outdated CRM, moving to ServiceTrade soon.
+Trial Plan Details (40:00 - 45:00)
+Looking at the premium tier to get advanced voice customization and direct ServiceTrade integration.
+Integration Status (18:00 - 22:00)
+Wants Clara to be live as soon as the ServiceTrade migration is done (estimated 3 weeks).
+
+Need
+Call Automation (23:00 - 28:00)
+Wants Clara to specifically ask clarifying questions: "Is water actively leaking?" or "Is the alarm panel beeping?"
+Call Handling Capacity (29:00 - 31:00)
+Needs burst capacity to handle 10+ simultaneous calls during a winter storm freeze event.
+Follow-up and Notifications (32:00 - 35:00)
+Require automated dispatch updates to property managers.
+Schedule non-emergency quarterly alarm tests without human intervention.
+
+Timeline
+Contract Signing and Kickoff (46:00 - 48:00)
+Ready to move forward today to align with CRM migration timeline.
+⏳ Onboarding Process (49:00 - 52:00)
+Four-week staggered onboarding to match their internal tech changes.
+
+Action items
+Sarah Jenkins
+Provide standard operating procedures (SOPs) for classifying wet vs dry system emergencies.
+Bharat
+Provide an integration sandbox so Sarah's team can test before full rollout.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

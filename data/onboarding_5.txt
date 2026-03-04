@@ -1,0 +1,23 @@
+Onboarding Call: Facility Maintenance (Commercial)
+Customer Background
+Emily Chen setting up the Midwest pilot for facility maintenance triage.
+
+Configuration Setup
+Business Hours and Routing (10:00 - 25:00)
+Standard hours: 24/7 operation. No "after hours" concept.
+Emergency Definition: Any issue that stops the retail store from operating (e.g., power outage, major leak).
+Routing Strategy: Clara uses a dynamic lookup table. Identifies the trade (electrical, plumbing, HVAC) and calls the primary contractor for that specific store's zip code.
+Integration Deep Dive (30:00 - 45:00)
+Configured ServiceTrade to allow Clara to check contractor schedules live.
+Store ID authentication is live. If a caller fails authentication twice, route to a human supervisor (555-1122).
+
+Testing & Validation
+Call Testing (50:00 - 01:10:00)
+Extensive run-through of the decision tree.
+Tested a scenario where the store ID was invalid. Clara correctly handled the failure.
+
+Action items
+Emily Chen
+Inform Midwest store managers about the new automated intake line.
+Bharat
+Polish the voice pacing; it felt a bit too fast for the complex facility workflows.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

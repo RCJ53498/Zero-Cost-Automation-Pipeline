@@ -1,0 +1,38 @@
+{
+  "company_name": "Emily Chen's Facility Maintenance Firm",
+  "business_hours": {
+    "days": "24/7",
+    "start": "00:00",
+    "end": "23:59",
+    "timezone": "UTC-5"
+  },
+  "office_address": "Not specified",
+  "services_supported": [
+    "plumbing",
+    "electrical",
+    "HVAC"
+  ],
+  "emergency_definition": [
+    "Store manager calling in via store ID"
+  ],
+  "emergency_routing_rules": {
+    "behavior": "Transfer to Level-2 triage",
+    "transfer_number": "555-1122",
+    "fallback": "Not specified"
+  },
+  "non_emergency_routing_rules": "Route to correct sub-contractor pool based on request type",
+  "call_transfer_rules": {
+    "timeout_seconds": 30,
+    "retries": 1,
+    "failure_message": "Not specified"
+  },
+  "integration_constraints": "Deep ServiceTrade integration required for real-time contractor availability",
+  "after_hours_flow_summary": "Not specified",
+  "office_hours_flow_summary": "Not specified",
+  "questions_or_unknowns": [
+    "What is the expected volume of calls during extreme weather events?",
+    "How will the authentication module handle store IDs with varying lengths?"
+  ],
+  "notes": "Not specified",
+  "account_id": "5"
+}
