@@ -1,21 +1,19 @@
 ## Changelog
 
-## Additions
-- Added "HVAC" to the list of services supported.
-- Specified the start and end times of business hours (24/7) and the timezone (UTC-5).
-- Specified the transfer number for emergency routing rules (555-1122).
+### Additions
 
-## Modifications
-- Modified the business hours to reflect 24/7 operation.
-- Modified the start and end times of business hours to be more specific (00:00 to 23:59).
+- **office_address**: Added an empty string to indicate that the office address is not specified.
+- **emergency_routing_rules** and **non_emergency_routing_rules**: Added empty strings to indicate that these rules are not specified.
+- **after_hours_flow_summary** and **office_hours_flow_summary**: Added empty strings to indicate that these summaries are not specified.
+- **questions_or_unknowns**: Added "Contract renewal details (e.g. price, timeline)" to the list of questions or unknowns.
 
-## Removals
+### Modifications
+
+- **emergency_routing_rules**:
+  - Changed `transfer_number` from "Not specified in the transcript" to an empty string.
+  - Changed `fallback` from "Not specified in the transcript" to an empty string.
+- **non_emergency_routing_rules**: Changed from "Not specified in the transcript" to an empty string.
+
+### Removals
+
 - None
-
-## Changes
-- Updated the emergency routing rules to include a fallback option.
-- Updated the integration constraints to reflect the addition of HVAC services.
-
-## Notes
-- The authentication module's handling of store IDs with varying lengths remains unclear.
-- The expected volume of calls during extreme weather events remains unknown.

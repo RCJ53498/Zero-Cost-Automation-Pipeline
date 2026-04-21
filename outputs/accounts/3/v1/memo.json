@@ -1,36 +1,40 @@
 {
-  "company_name": "Sprinkler and Alarm Contractor",
+  "company_name": "Clara",
   "business_hours": {
     "days": "Monday to Friday",
-    "start": "08:00",
-    "end": "17:00",
-    "timezone": "UTC-05:00"
+    "start": "9:00 AM",
+    "end": "5:00 PM",
+    "timezone": "Pacific Time Zone"
   },
-  "office_address": "123 Main St, Anytown, USA",
+  "office_address": "Not specified in the transcript",
   "services_supported": [
-    "Commercial property safety systems",
-    "Alarm monitoring"
+    "AI-powered solutions for trades and businesses",
+    "Contract management and renewal"
   ],
   "emergency_definition": [
-    "Frozen/burst sprinkler pipes in winter"
+    "Not explicitly defined in the transcript"
   ],
   "emergency_routing_rules": {
-    "behavior": "Transfer to human operator",
-    "transfer_number": "1",
-    "fallback": "Automated dispatch update"
+    "behavior": "Not explicitly defined in the transcript",
+    "transfer_number": "Not explicitly defined in the transcript",
+    "fallback": "Not explicitly defined in the transcript"
   },
-  "non_emergency_routing_rules": "Schedule quarterly alarm tests",
+  "non_emergency_routing_rules": "Not specified in the transcript",
   "call_transfer_rules": {
     "timeout_seconds": 30,
     "retries": 1,
-    "failure_message": "Please try again later"
+    "failure_message": "Not explicitly defined in the transcript"
   },
-  "integration_constraints": "ServiceTrade integration must be live before Clara deployment",
-  "after_hours_flow_summary": "Automated dispatch updates during winter storm events",
-  "office_hours_flow_summary": "Human operator handling during business hours",
-  "questions_or_unknowns": [
-    "What is the expected SLA for commercial clients?"
+  "integration_constraints": [
+    "Contract renewal and management must be done through Docusign",
+    "Contract terms are valid for 12 months, with a possible price change after 3 months"
   ],
-  "notes": "Outdated CRM, moving to ServiceTrade soon",
+  "after_hours_flow_summary": "Not specified in the transcript",
+  "office_hours_flow_summary": "Not specified in the transcript",
+  "questions_or_unknowns": [
+    "What is the specific integration constraint for contract management and renewal?",
+    "Are there any other integration constraints or requirements not explicitly mentioned?"
+  ],
+  "notes": "Not specified in the transcript",
   "account_id": "3"
 }

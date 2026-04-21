@@ -1,38 +1,38 @@
 {
-  "company_name": "Emily Chen's Facility Maintenance Firm",
+  "company_name": "Clara",
   "business_hours": {
-    "days": "24/7",
-    "start": "00:00",
-    "end": "23:59",
-    "timezone": "UTC-5"
+    "days": "Monday to Friday",
+    "start": "9:00 AM",
+    "end": "5:00 PM",
+    "timezone": "Pacific Time Zone"
   },
-  "office_address": "Not specified",
+  "office_address": "",
   "services_supported": [
-    "plumbing",
-    "electrical",
-    "HVAC"
+    "AI-powered solutions for trades and businesses",
+    "Contract management and renewal"
   ],
   "emergency_definition": [
-    "Store manager calling in via store ID"
+    "Contractor's emergency contact information"
   ],
   "emergency_routing_rules": {
-    "behavior": "Transfer to Level-2 triage",
-    "transfer_number": "555-1122",
-    "fallback": "Not specified"
+    "behavior": "Default routing behavior",
+    "transfer_number": "",
+    "fallback": ""
   },
-  "non_emergency_routing_rules": "Route to correct sub-contractor pool based on request type",
+  "non_emergency_routing_rules": "",
   "call_transfer_rules": {
     "timeout_seconds": 30,
     "retries": 1,
-    "failure_message": "Not specified"
+    "failure_message": "Contract not executed"
   },
-  "integration_constraints": "Deep ServiceTrade integration required for real-time contractor availability",
-  "after_hours_flow_summary": "Not specified",
-  "office_hours_flow_summary": "Not specified",
+  "integration_constraints": "Integration with existing CRM systems required",
+  "after_hours_flow_summary": "",
+  "office_hours_flow_summary": "",
   "questions_or_unknowns": [
-    "What is the expected volume of calls during extreme weather events?",
-    "How will the authentication module handle store IDs with varying lengths?"
+    "Company's physical office address",
+    "Contractor's emergency contact information",
+    "Contract renewal details (e.g. price, timeline)"
   ],
-  "notes": "Not specified",
+  "notes": "Meeting summary and next steps discussed",
   "account_id": "5"
 }

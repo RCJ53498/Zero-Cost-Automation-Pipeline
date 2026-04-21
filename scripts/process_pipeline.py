@@ -6,6 +6,23 @@ import requests
 import re
 from datetime import datetime
 
+# ---------------------------------------------------------------------------
+# Load .env from the project root (sibling of the scripts/ folder)
+# ---------------------------------------------------------------------------
+def _load_dotenv():
+    env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env")
+    if not os.path.exists(env_path):
+        return
+    with open(env_path) as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, value = line.partition("=")
+            os.environ.setdefault(key.strip(), value.strip())
+
+_load_dotenv()
+
 # Local Ollama endpoint
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL_NAME = "llama3.2"  # Ensure this model is pulled via `ollama pull llama3.2`
@@ -17,9 +34,24 @@ def check_ollama_running():
             return True
         return False
     except requests.exceptions.ConnectionError:
+        print("ERROR: Ollama server is not running. Start it with: ollama serve", file=sys.stderr)
+        return False
+    except Exception as e:
+        print(f"ERROR: Could not reach Ollama: {e}", file=sys.stderr)
         return False
 
+
+MAX_TRANSCRIPT_CHARS = 6000   # ~1500 tokens — enough for key facts, safe for 3.2B
+
+def truncate_transcript(text, max_chars=MAX_TRANSCRIPT_CHARS):
+    """Keep the first and last portion of the transcript to capture intro + closing details."""
+    if len(text) <= max_chars:
+        return text
+    half = max_chars // 2
+    return text[:half] + "\n\n[...transcript truncated for brevity...]\n\n" + text[-half:]
+
 def extract_with_ollama(transcript_text, previous_memo=None):
+    transcript_text = truncate_transcript(transcript_text, 15000)
     if not check_ollama_running():
         print("MOCK MODE: Ollama not running on localhost:11434. Returning dummy JSON.", file=sys.stderr)
         return {
@@ -99,30 +131,43 @@ def extract_with_ollama(transcript_text, previous_memo=None):
     payload = {
         "model": MODEL_NAME,
         "prompt": prompt,
-        "format": "json",  # Changed from schema to lit 'json' to prevent 500 errors in llama.cpp grammar check
+        "format": "json",
         "stream": False,
         "options": {
-            "temperature": 0.0
+            "temperature": 0.0,
+            "num_ctx": 8192   # Safe ceiling for llama3.2 3B — avoids OOM and slow inference
         }
     }
     
     try:
-        response = requests.post(OLLAMA_URL, json=payload, timeout=300)
+        response = requests.post(OLLAMA_URL, json=payload, timeout=300)  # 5 min cap; first call may cold-load model
         response.raise_for_status()
         result = response.json()
         text_response = result.get('response', '{}').strip()
         
-        # In case the model still outputs markdown backticks, strip them:
+        # Strip markdown code fences if the model still adds them
         if text_response.startswith("```json"):
             text_response = text_response[7:]
         if text_response.startswith("```"):
             text_response = text_response[3:]
         if text_response.endswith("```"):
             text_response = text_response[:-3]
+        text_response = text_response.strip()
+        
+        if not text_response:
+            print("WARNING: Ollama returned an empty response.", file=sys.stderr)
+            return {"company_name": "Empty Response", "business_hours": {}}
             
-        return json.loads(text_response.strip())
+        return json.loads(text_response)
+    except requests.exceptions.Timeout:
+        print("ERROR: Ollama request timed out after 180s. The model may be overloaded.", file=sys.stderr)
+        return {"company_name": "API Error (Timeout)", "business_hours": {}}
+    except json.JSONDecodeError as e:
+        print(f"ERROR: Could not parse JSON from Ollama response: {e}", file=sys.stderr)
+        print(f"  Raw response (first 500 chars): {text_response[:500]}", file=sys.stderr)
+        return {"company_name": "API Error (Bad JSON)", "business_hours": {}}
     except Exception as e:
-        print(f"Error calling Ollama API: {e}", file=sys.stderr)
+        print(f"ERROR calling Ollama API: {e}", file=sys.stderr)
         return {"company_name": "API Error", "business_hours": {}}
 
 def create_task_tracker_item(account_id, company_name, call_type):
@@ -191,11 +236,12 @@ def generate_changes_with_ollama(v1_memo, v2_memo):
         "prompt": prompt,
         "stream": False,
         "options": {
-            "temperature": 0.0
+            "temperature": 0.0,
+            "num_ctx": 4096   # Changelog only needs a small context window
         }
     }
     try:
-        response = requests.post(OLLAMA_URL, json=payload, timeout=300)
+        response = requests.post(OLLAMA_URL, json=payload, timeout=120)
         response.raise_for_status()
         return response.json().get('response', '')
     except Exception as e:
@@ -228,13 +274,18 @@ Business Hours: {bh_days}, {bh_start} to {bh_end}.
 Emergencies defined as: {emerg_def}.
 Emergency transfer number: {emerg_routing}.
 
+# Tools & Communication:
+- Whenever a transfer is required (Emergency or Request), you MUST use the `transfer_call` tool with the provided number.
+- DO NOT mention the tool name to the caller.
+- SUCCESS: If the tool is invoked successfully, say: "I am connecting you now. Please stay on the line."
+- FAILURE: Only if the tool invocation fails or errors out, apologize and say: "I'm sorry, I'm having trouble routing your call at the moment. I have your contact information and will have someone follow up with you immediately."
+
 # Business Hours Flow:
 - Greeting: "Thank you for calling {memo.get('company_name', 'us')}, this is Clara. How can I help you?"
 - Ask purpose of the call.
 - Collect caller's name and phone number.
-- Based on the request, route or transfer appropriately.
-- If transferring and it fails: apologize and say someone will call them back immediately.
-- Confirm next steps.
+- Based on the request, route or initiate `transfer_call` appropriately.
+- Confirm next steps after the action is taken.
 - Ask: "Is there anything else I can help you with today?"
 - Close call if no.
 
@@ -242,8 +293,7 @@ Emergency transfer number: {emerg_routing}.
 - Greeting: "Thank you for calling {memo.get('company_name', 'us')} after hours, this is Clara."
 - Ask purpose of the call.
 - Confirm if it is an emergency ({emerg_def}).
-- IF EMERGENCY: Collect name, number, and exact address immediately. Attempt transfer to {emerg_routing}.
-- If transfer fails: Apologize, assure them a technician has been notified via text/emergency line and will follow up shortly.
+- IF EMERGENCY: Collect name, number, and exact address immediately. Then, use the `transfer_call` tool to {emerg_routing}.
 - IF NON-EMERGENCY: Collect details, let them know the office is closed, and schedule/confirm follow-up during regular business hours.
 - Ask: "Is there anything else?"
 - Close call.
@@ -293,7 +343,9 @@ def main():
         transcript = f.read()
         
     if call_type == "demo":
-        print(f"Processing Demo for Account {account_id}...")
+        print(f"Processing Demo for Account {account_id}... (transcript: {len(transcript)} chars)")
+        transcript = truncate_transcript(transcript)
+        print(f"  Sending {len(transcript)} chars to Ollama...")
         memo = extract_with_ollama(transcript)
         memo['account_id'] = account_id
         
@@ -323,6 +375,8 @@ def main():
         else:
             print(f"Warning: V1 memo not found for account {account_id}. Creating new one based entirely on onboarding.")
             
+        transcript = truncate_transcript(transcript)
+        print(f"  Sending {len(transcript)} chars to Ollama...")
         v2_memo = extract_with_ollama(transcript, previous_memo=v1_memo)
         v2_memo['account_id'] = account_id
         

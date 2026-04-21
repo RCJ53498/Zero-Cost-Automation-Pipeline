@@ -1,8 +1,10 @@
-Speaker 1: 00:00 
-All right, we'll let Dave in now in three, two, one. And he's in.
+import os
+
+part1 = """Speaker 1: 00:00 
+All right, we'll let Ben in now in three, two, one. And he's in.
 
 Speaker 2: 00:16 
-Hey, Dave, can you hear me?
+Hey, Ben, can you hear me?
 
 Speaker 3: 00:22 
 Wait, can you hear me? Yeah.
@@ -14,10 +16,10 @@ Speaker 3: 00:25
 Here we go.
 
 Speaker 2: 00:26 
-Okay, Dave, thank you so much for joining on such a short notice. And before starting, just wanted to introduce myself again. I'm Nick. I am part of the Clara team. We reach out to businesses across North America, and we have built this AI agents for trades, businesses specifically. And to help us with that, I have here with me my colleague Bharat, who's the solutions expert and the growth partner at Clara AI and he's the best person who knows everything in and out about the industry as well as the product. So he'll be the one who will be walking us through the presentation today. Over to you, Bharat.
+Okay, Ben, thank you so much for joining on such a short notice. And before starting, just wanted to introduce myself again. I'm Nick. I am part of the Clara team. We reach out to businesses across North America, and we have built this AI agents for trades, businesses specifically. And to help us with that, I have here with me my colleague Bharat, who's the solutions expert and the growth partner at Clara AI and he's the best person who knows everything in and out about the industry as well as the product. So he'll be the one who will be walking us through the presentation today. Over to you, Bharat.
 
 Speaker 1: 01:06 
-Thank you, Nick. Dave, good morning. How are you?
+Thank you, Nick. Ben, good morning. How are you?
 
 Speaker 3: 01:09 
 I'm doing very well. How are you?
@@ -35,7 +37,7 @@ Speaker 3: 01:27
 I am always in a rush, but no, we've got time.
 
 Speaker 1: 01:30 
-Great. So let me start off by introducing myself and my company, what we do. And after that, we'd love to know a little about you as well, since it's the first time we've connected. And then we'll dive into what we're doing, and then we'll do a onboarding steps for your account, and then we'll see how things go from there. Sounds good. Okay. So I am Bharat. I work with Nick and a few other folks, so we're a very lean team. And I represent the solutions team here at Clara. What I do day in and day out, Dave, is I speak to contractors such as yourself, understand your workflows, see how you're doing things right now, which I'm sure is at a very optimal level of doing things efficiently. But after understanding, I see, where can we plug in our solution to further enhance the way of you do things Right. And that's what I'll be doing here today as well. And a little about the company so we started a while ago. It's been close to three years now. And why we started, what we. We do today is because we saw AI taking over the world. I'm sure you also have heard.
+Great. So let me start off by introducing myself and my company, what we do. And after that, we'd love to know a little about you as well, since it's the first time we've connected. And then we'll dive into what we're doing, and then we'll do a demo of our platform, and then we'll see how things go from there. Sounds good. Okay. So I am Bharat. I work with Nick and a few other folks, so we're a very lean team. And I represent the solutions team here at Clara. What I do day in and day out, Ben, is I speak to contractors such as yourself, understand your workflows, see how you're doing things right now, which I'm sure is at a very optimal level of doing things efficiently. But after understanding, I see, where can we plug in our solution to further enhance the way of you do things Right. And that's what I'll be doing here today as well. And a little about the company so we started a while ago. It's been close to three years now. And why we started, what we. We do today is because we saw AI taking over the world. I'm sure you also have heard.
 
 Speaker 3: 02:38 
 It's everywhere. Yeah.
@@ -56,7 +58,7 @@ Speaker 1: 03:23
 Right.
 
 Speaker 3: 03:23 
-I've been an technician for 30 years, running my own business for, like I said, the last eight. Sorry. I'm gonna try and grow pretty. Try and grow a little bit bigger here this year. You know, we're, we've been relatively small.
+I've been an electrician for 30 years, running my own business for, like I said, the last eight. Sorry. I'm gonna try and grow pretty. Try and grow a little bit bigger here this year. You know, we're, we've been relatively small.
 
 Speaker 1: 03:37 
 Right.
@@ -86,10 +88,10 @@ Speaker 1: 05:59
 Lovely. And so you mentioned you have subcontractors, people who join and I'm assuming for certain projects, certain tasks.
 
 Speaker 3: 06:05 
-I'm assuming, yeah, pretty much. I've got, you know, when we get busy I bring in subcontractors to take in the overflow work. So I mean, I've had one guy working basically full time for me as a subcontractor. Subcontractors are great because they're generally pretty good technicians who think, you know, that's where they're working on their own. They're also not as reliable because when they get their own jobs sometimes they don't get very much notice. So that's why we're getting another company van on the road because I'm definitely busy enough to have three full time guys pick up the subs, scroll back a little bit of their work, but keep them going and so on and so forth.
+I'm assuming, yeah, pretty much. I've got, you know, when we get busy I bring in subcontractors to take in the overflow work. So I mean, I've had one guy working basically full time for me as a subcontractor. Subcontractors are great because they're generally pretty good electricians who think, you know, that's where they're working on their own. They're also not as reliable because when they get their own jobs sometimes they don't get very much notice. So that's why we're getting another company van on the road because I'm definitely busy enough to have three full time guys pick up the subs, scroll back a little bit of their work, but keep them going and so on and so forth.
 
 Speaker 1: 06:41 
-Great. So subcontractors come in and come out. You have of course, somebody who's been with you consistently. But if you talk about the full time guys, full time technicians, like journeyman or do you have a few of them as well with you?
+Great. So subcontractors come in and come out. You have of course, somebody who's been with you consistently. But if you talk about the full time guys, full time electricians, like journeyman or do you have a few of them as well with you?
 
 Speaker 3: 06:53 
 Yeah. So each van will have has a full time journeyman. So I've got three journeymen and then I'll have one apprentice. Actually I just laid off an apprentice so I have to be getting another apprentice here pretty soon.
@@ -137,10 +139,10 @@ Speaker 3: 08:46
 It's. It is. You know, we do EV chargers, we do hot tub hookups, panel changes. Right. All that service maintenance stuff.
 
 Speaker 1: 08:53 
-I was about to ask you, I saw Evie on your website. I was like, okay, wow. So you're doing service work. Because I saw you doing residential commercial projects. Everything was there. I was scrolling. I was like, oh, wow, you have EV as well. So there's lot of things that go into that as well. So I'm very curious. How are you managing all this? It's a lot of work.
+I was about to ask you, I saw Evie on your website. I was like, okay, wow. So you're doing electrical work. Because I saw you doing residential commercial projects. Everything was there. I was scrolling. I was like, oh, wow, you have EV as well. So there's lot of things that go into that as well. So I'm very curious. How are you managing all this? It's a lot of work.
 
 Speaker 3: 09:10 
-It's. It's a lot. It isn't. It isn't. You know, I mean, it's all service. It all needs to be done by technicians. We all have the skills. It's really just a matter of what. What things we've actually worked with. You know, like the first time you hook up an electric vehicle charger, you got to figure it out. But once you've. Once you figured it out, then it's a lot easier. We do stretch ourselves fairly thin with the services, so it's tough to. It's tough to let certain things go. You know, if customer gives us a call and we got some work, yeah, sure, we can come help you out. You know, there's some things we don't do anymore. I was trying to do like the gemstone lights for a little while, but that just. It wasn't. It wasn't worth it, basically, you know, so we still get calls for that and may be able to say, no, we don't do that. Right. But.
+It's. It's a lot. It isn't. It isn't. You know, I mean, it's all electrical. It all needs to be done by electricians. We all have the skills. It's really just a matter of what. What things we've actually worked with. You know, like the first time you hook up an electric vehicle charger, you got to figure it out. But once you've. Once you figured it out, then it's a lot easier. We do stretch ourselves fairly thin with the services, so it's tough to. It's tough to let certain things go. You know, if customer gives us a call and we got some work, yeah, sure, we can come help you out. You know, there's some things we don't do anymore. I was trying to do like the gemstone lights for a little while, but that just. It wasn't. It wasn't worth it, basically, you know, so we still get calls for that and may be able to say, no, we don't do that. Right. But.
 
 Speaker 1: 09:57 
 Okay, so you finally started turning down a little bit of work because that's part of. Probably outside your expertise.
@@ -173,7 +175,7 @@ Speaker 3: 11:29
 Yeah, and I don't have to very often. I've got, I've got one contractor, they are one property manager. They run some gas stations. So sometimes when they're. If their pumps go down, they've got to be fixed now. And so I get out there and do that one because I don't have any of my guys on call.
 
 Speaker 1: 11:46 
-Interesting. Okay, that's all very helpful. Thank you so much, Dave. And pardon my constant questioning. I'm just trying to understand you a little better and I think it's actually quite interesting how you've been running so far and how you have a vision to get your company to a certain level by the end of this year. That's amazing. And I have a few follow up questions. I'll pause on that front. What I'm very curious to know is your experience with. You mentioned a virtual receptionist or a virtual. Was it an AI solution or what.
+Interesting. Okay, that's all very helpful. Thank you so much, Ben. And pardon my constant questioning. I'm just trying to understand you a little better and I think it's actually quite interesting how you've been running so far and how you have a vision to get your company to a certain level by the end of this year. That's amazing. And I have a few follow up questions. I'll pause on that front. What I'm very curious to know is your experience with. You mentioned a virtual receptionist or a virtual. Was it an AI solution or what.
 
 Speaker 3: 12:13 
 Was actually a virtual assistant. So it was a live person that I had access to and I was paying them for 20 hours a week of her time kind of thing or whatever it was. Right. And so it was more about if I was communicating with her, but because like I didn't. Yeah, it was weird because I was only paying for a certain number of hours. Right. Which is fixed. It's. I couldn't have her answering the phones necessarily. I maybe could have, but I didn't have that. I didn't know how to set that up. Probably I could have used her a little bit more to do more client and data entry. But it was kind of weird. I think, I think someone in that position, I needed them to be a bit more proactive and I was pretty new to my business. I have, I have an assistant now who I'm going to be bringing on as a operations manager or estimator to help me with the stuff that I'm doing and kind of figured that out. That's going way better. I communicate with him all the time, get him to do a lot of data entry for me. Then here next month I'm going to be getting him to go look at some jobs by himself. Like he's been coming with me to do quotes, so.
@@ -233,7 +235,7 @@ Speaker 3: 15:12
 No, not really.
 
 Speaker 1: 15:14 
-Okay. So I'm more excited now because now I have, like, a lot of pressure to show you the magic that AI can do. And I'm also equally excited because we've been spending years into building this and speaking to somebody and showing it to the first time. The reaction is very different. So I'm. I'm looking forward to that. So now let me tell you what we do, Dave. And again, while I'm doing that, just how I've been constantly badgering you with questions. You can do that too, right?
+Okay. So I'm more excited now because now I have, like, a lot of pressure to show you the magic that AI can do. And I'm also equally excited because we've been spending years into building this and speaking to somebody and showing it to the first time. The reaction is very different. So I'm. I'm looking forward to that. So now let me tell you what we do, Ben. And again, while I'm doing that, just how I've been constantly badgering you with questions. You can do that too, right?
 
 Speaker 3: 15:38 
 Okay, sounds good.
@@ -245,7 +247,7 @@ Speaker 3: 16:29
 Okay, Right.
 
 Speaker 1: 16:30 
-And that's how we started on our journey. We built a lot of agents. So as of today, we have close to six agents catering to different aspects of the business. And I believe in your conversation with Nick might have told you that we're also building certain AI solutions that can help you with your back office things. Do you remember any of those things or. No. Okay, so I'm going to tell you everything from scratch then. No, I. So we'll start with this most simplest thing. What's. What we've tried to build is a solution that can help you. Specifically, since you mentioned that you're the one taking calls, you probably get calls after hours, you probably get calls from emergencies you might go or might not go. But point is that the calls are coming in, you have to speak to the customers. There are certain times the calls are relevant, certain times the calls are irrelevant. So how can we help Dave save time on this task?
+And that's how we started on our journey. We built a lot of agents. So as of today, we have close to six agents catering to different aspects of the business. And I believe in your conversation with Nick might have told you that we're also building certain AI solutions that can help you with your back office things. Do you remember any of those things or. No. Okay, so I'm going to tell you everything from scratch then. No, I. So we'll start with this most simplest thing. What's. What we've tried to build is a solution that can help you. Specifically, since you mentioned that you're the one taking calls, you probably get calls after hours, you probably get calls from emergencies you might go or might not go. But point is that the calls are coming in, you have to speak to the customers. There are certain times the calls are relevant, certain times the calls are irrelevant. So how can we help Ben save time on this task?
 
 Speaker 3: 17:19 
 Okay.
@@ -293,7 +295,7 @@ Speaker 3: 19:30
 Yeah.
 
 Speaker 1: 19:31 
-There's a objection about an invoice. Now, tomorrow, if Dave has an accounting department, that call ideally should go to that accounting department, and they resolve that. So the AIR is already trained and configured that if somebody's asking for an invoice, it validates and verifies that this is a legitimate call, and then it routes it to that person and their phone rings automatically.
+There's a objection about an invoice. Now, tomorrow, if Ben has an accounting department, that call ideally should go to that accounting department, and they resolve that. So the AIR is already trained and configured that if somebody's asking for an invoice, it validates and verifies that this is a legitimate call, and then it routes it to that person and their phone rings automatically.
 
 Speaker 3: 19:52 
 Okay.
@@ -341,7 +343,7 @@ Speaker 3: 21:06
 Okay.
 
 Speaker 1: 21:07 
-As in, you know, you have an service problem. And what's the problem? Maybe there is. There are sparks coming out of certain circuit boards or anything for that matter. There's no electricity. Yeah.
+As in, you know, you have an electrical problem. And what's the problem? Maybe there is. There are sparks coming out of certain circuit boards or anything for that matter. There's no electricity. Yeah.
 
 Speaker 3: 21:18 
 Okay.
@@ -359,7 +361,7 @@ Speaker 3: 21:33
 Sure.
 
 Speaker 1: 21:34 
-Yeah. Great. Do you have a phone handy, Dave?
+Yeah. Great. Do you have a phone handy, Ben?
 
 Speaker 3: 21:37 
 I do, yeah.
@@ -377,7 +379,7 @@ Speaker 3: 22:11
 Yeah. Okay, so 207 1364. Okay.
 
 Speaker 4: 22:28 
-This is Claire from Dave's Roofing. How can I help you today?
+This is Claire from ABC Company. How can I help you today?
 
 Speaker 3: 22:32 
 Oh, hello. I'm wondering if you guys do outlet replacements.
@@ -392,22 +394,22 @@ Speaker 4: 22:57
 Thanks for sharing that. Upgrading all outlets and addressing aluminum wiring is a smart move for safety. Can I get your name and the address where the work will be done? That way I can check availability and get you set up for an estimate.
 
 Speaker 3: 23:09 
-My name is Dave and The address is 17119 Sundown Road, Southeast Calgary, Alberta.
+My name is Ben and The address is 17119 Sundown Road, Southeast Calgary, Alberta.
 
 Speaker 4: 23:19 
-Let me quickly verify that address for you. Thanks, Dave. Just to confirm is the address 17119 Sundown Road S.E. Calgary, Alberta? T 2X3D4? Did I get that right?
+Let me quickly verify that address for you. Thanks, Ben. Just to confirm is the address 17119 Sundown Road S.E. Calgary, Alberta? T 2X3D4? Did I get that right?
 
 Speaker 3: 23:31 
 Yes. Do you guys also do fixture replace?
 
 Speaker 4: 23:38 
-You can assess and upgrade your outlets to meet current safety codes, especially when dealing with aluminum wiring. Our licensed technicians will make sure everything is up to standard and safe for your home. Would you like to schedule a visit for a full assessment? And just a quick note, many of our customers join our club membership for priority scheduling, discounts on services and annual safety checks. I can share more details if you're interested.
+You can assess and upgrade your outlets to meet current safety codes, especially when dealing with aluminum wiring. Our licensed electricians will make sure everything is up to standard and safe for your home. Would you like to schedule a visit for a full assessment? And just a quick note, many of our customers join our club membership for priority scheduling, discounts on services and annual safety checks. I can share more details if you're interested.
 
 Speaker 3: 24:03 
 Not right now.
 
 Speaker 4: 24:07 
-No problem at all. Let's focus on your outlet and aluminum wiring project. What's the best phone number to reach you, Dave? In case we need to confirm any details or scheduling. And do you have a preferred date or time for the assessment?
+No problem at all. Let's focus on your outlet and aluminum wiring project. What's the best phone number to reach you, Ben? In case we need to confirm any details or scheduling. And do you have a preferred date or time for the assessment?
 
 Speaker 3: 24:19 
 403-975-1773. And I would like to have somebody come out on Friday if possible.
@@ -425,7 +427,7 @@ Speaker 3: 25:03
 I'll pick another time.
 
 Speaker 4: 25:07 
-Understood. I'll schedule you for the first available slot after 8am on Friday, January 9, 2026. I'll confirm the exact time with our team and let you know. You're all set. For now, Dave, if you have any other questions or need to adjust the appointment, just let us know. Thanks for calling and have a great day.
+Understood. I'll schedule you for the first available slot after 8am on Friday, January 9, 2026. I'll confirm the exact time with our team and let you know. You're all set. For now, Ben, if you have any other questions or need to adjust the appointment, just let us know. Thanks for calling and have a great day.
 
 Speaker 3: 25:25 
 Thanks.
@@ -434,7 +436,7 @@ Speaker 1: 25:27
 Okay, you can hang up.
 
 Speaker 4: 25:29 
-Welcome, Dave. We'll be in touch soon to confirm your appointment time for Friday. Have a great day.
+Welcome, Ben. We'll be in touch soon to confirm your appointment time for Friday. Have a great day.
 
 Speaker 3: 25:34 
 YouTube. Wow. That was actually pretty good.
@@ -446,7 +448,7 @@ Speaker 3: 25:42
 Yeah, yeah, that was. I actually really like that. Yeah. Surprised at how good it was, to be honest. I mean, you know, for being the person I am, you know, you can tell right away you're talking to computer. But that's okay. Who cares? It answered all my questions. It did everything. I tried interrupting her too, you know. I requested a time that we're not actually open, which you must have given her some provisions of our company. I don't know. But that was pretty cool actually. I like that.
 
 Speaker 1: 26:14 
-Yes. So you Got that absolutely right. Right now we are going over the onboarding. It's not built or trained on your business just yet. Yeah, but it will be. That's what we'll do. That's step one, of course. And I'll tell you a little bit about what the system does. So you had you experienced the call yourself, but if you get say 20, 30 calls at the same time. Right. Dave's only one person today. He can only take one of few calls. The remaining goes into voicemail or something. The system's capable of taking 20, 30 calls at the same time.
+Yes. So you Got that absolutely right. Right now it's a demo. It's not built or trained on your business just yet. Yeah, but it will be. That's what we'll do. That's step one, of course. And I'll tell you a little bit about what the system does. So you had you experienced the call yourself, but if you get say 20, 30 calls at the same time. Right. Ben's only one person today. He can only take one of few calls. The remaining goes into voicemail or something. The system's capable of taking 20, 30 calls at the same time.
 
 Speaker 3: 26:43 
 Okay.
@@ -458,7 +460,7 @@ Speaker 3: 27:21
 Okay. Yeah.
 
 Speaker 1: 27:23 
-Another piece is like I was mentioning earlier, the smart escalation. So if, let's say there's a call about a certain job in which Dave's not required on this conversation, but it needs to be routed to someone else so we can have those workflows configured that it gets escalated to that person.
+Another piece is like I was mentioning earlier, the smart escalation. So if, let's say there's a call about a certain job in which Ben's not required on this conversation, but it needs to be routed to someone else so we can have those workflows configured that it gets escalated to that person.
 
 Speaker 3: 27:37 
 Okay.
@@ -513,11 +515,11 @@ So, okay, so I can go in and look at the dashboard, and then I can assign the ca
 
 Speaker 1: 31:15 
 So currently, it'll be you who will be doing the assigning initially, because we got to understand how the patterns are. And then eventually in the next few phases, we can have that piece automated as well.
+"""
 
-
-
+part2 = """
 Speaker 4: 43:02 
-Great question. For an electric vehicle charger in your garage, you can use either copper or aluminum wire, but copper is generally preferred because it's more durable, has better conductivity and is easier to work with, especially for shorter runs. Like most garages. However, aluminum wire can be used for longer runs or larger amperage if local code allows. But it requires special connectors and antioxidant compound to ensure safe connections. Most technicians recommend copper for EV chargers unless there's a specific reason to use aluminum. If you'd like, we can have an technician review your setup and recommend the best option for your home. And just a quick reminder, our club membership gives you discounts on installations like EV chargers, plus priority scheduling and annual safety checks. Let me know if you want more info.
+Great question. For an electric vehicle charger in your garage, you can use either copper or aluminum wire, but copper is generally preferred because it's more durable, has better conductivity and is easier to work with, especially for shorter runs. Like most garages. However, aluminum wire can be used for longer runs or larger amperage if local code allows. But it requires special connectors and antioxidant compound to ensure safe connections. Most electricians recommend copper for EV chargers unless there's a specific reason to use aluminum. If you'd like, we can have an electrician review your setup and recommend the best option for your home. And just a quick reminder, our club membership gives you discounts on installations like EV chargers, plus priority scheduling and annual safety checks. Let me know if you want more info.
 
 Speaker 3: 43:50 
 What's better, Incandescent lighting or LED lighting?
@@ -532,10 +534,10 @@ Speaker 1: 44:43
 Ask it random questions about pizzas.
 
 Speaker 3: 44:46 
-Oh, do you guys deliver pizza when you come to do the service quote?
+Oh, do you guys deliver pizza when you come to do the electrical quote?
 
 Speaker 4: 44:52 
-I wish we did. Sadly, no pizza delivery with our service quotes. Just top notch service and maybe a few good jokes from our technicians. If you ever need anything else though, we're always here to help. Thanks so much for calling today. Hope you have a great day ahead.
+I wish we did. Sadly, no pizza delivery with our electrical quotes. Just top notch service and maybe a few good jokes from our electricians. If you ever need anything else though, we're always here to help. Thanks so much for calling today. Hope you have a great day ahead.
 
 Speaker 3: 45:09 
 Thanks. You as well. Oh, one more question. Oh, I forgot what it was.
@@ -553,7 +555,7 @@ Speaker 3: 45:28
 Yeah.
 
 Speaker 1: 45:29 
-And the funny thing is we didn't even train it on that. It began. Yeah, it picked it up on its own because. So the system's been. So if you see how the conversation started was you asking for a pool installation, which that company that cloud has been set up for doesn't do. But it still was able to navigate its conversation to a point where this actually got to a point when this could be a job for you, a potential service job, because otherwise people will be like, yeah, we don't do pool installation, call someone else buy. Yeah, yeah, that's not what it did. It actually went deeper, understood, and saw where is its potential. And that's how it's trained right now to do to. To answer service and plumbing questions.
+And the funny thing is we didn't even train it on that. It began. Yeah, it picked it up on its own because. So the system's been. So if you see how the conversation started was you asking for a pool installation, which that company that cloud has been set up for doesn't do. But it still was able to navigate its conversation to a point where this actually got to a point when this could be a job for you, a potential electrical job, because otherwise people will be like, yeah, we don't do pool installation, call someone else buy. Yeah, yeah, that's not what it did. It actually went deeper, understood, and saw where is its potential. And that's how it's trained right now to do to. To answer electrical and plumbing questions.
 
 Speaker 3: 46:07 
 Wow. Yeah.
@@ -571,7 +573,7 @@ Speaker 3: 46:54
 That's pretty cool. Yeah. That's neat.
 
 Speaker 1: 46:57 
-Yeah. I mean, there are a lot of things that the system does, but I think you get an idea of what this can do. Like I mentioned, this runs at all times and available around the clock. So if, let's say after 6 o', clock, Dave is not taking any calls, you're not available, you're busy, you're unwell for any reason, just not available. The system can be pivoted or like it can have a backup workflows where. Okay. Now from here on, all the calls that you're getting will be, of course, taken, but the jobs will be scheduled for tomorrow after 8am or maybe your team member will now be routed into these conversations or somebody else will be routed into these conversations. We can have your. If you have somebody on call tomorrow, we can have them plugged into the system so all those calls will go to that person. So if it's an emergency, Clara doesn't. So one more thing that this does is if somebody's calling with an emergency.
+Yeah. I mean, there are a lot of things that the system does, but I think you get an idea of what this can do. Like I mentioned, this runs at all times and available around the clock. So if, let's say after 6 o', clock, Ben is not taking any calls, you're not available, you're busy, you're unwell for any reason, just not available. The system can be pivoted or like it can have a backup workflows where. Okay. Now from here on, all the calls that you're getting will be, of course, taken, but the jobs will be scheduled for tomorrow after 8am or maybe your team member will now be routed into these conversations or somebody else will be routed into these conversations. We can have your. If you have somebody on call tomorrow, we can have them plugged into the system so all those calls will go to that person. So if it's an emergency, Clara doesn't. So one more thing that this does is if somebody's calling with an emergency.
 
 Speaker 3: 47:45 
 Yeah.
@@ -619,7 +621,7 @@ Speaker 3: 48:57
 Yeah.
 
 Speaker 1: 48:58 
-You don't want that call to be screened. You want that to come straight to you. So it'll be configured that. Okay, these are some personal numbers, private numbers. There's no filtration or screening happening there. That's. One second is if you have certain customers who you don't want to be screened at any point in time because they're like your long, very strong, relationship driven customers. So you don't have to. They'll be filtered out and about anyone reaching you. We don't want that because then there'll be no purpose. So we do have like a few levels of screening that. Okay, sure. I'm happy to connect you to Dave. Can you tell me what's it about? Just how you'll have like a virtual assistant. Right. So that virtual assistant also will transfer that call to you, but after it asks certain questions to make it a virtual, a verified and a valid call. So we can have those levels of. Unless you don't want that to be the case. Unless you want. Whoever asks for Dave, just get him to me. So that doesn't really. It defeats the purpose. But we can do that still, if you want.
+You don't want that call to be screened. You want that to come straight to you. So it'll be configured that. Okay, these are some personal numbers, private numbers. There's no filtration or screening happening there. That's. One second is if you have certain customers who you don't want to be screened at any point in time because they're like your long, very strong, relationship driven customers. So you don't have to. They'll be filtered out and about anyone reaching you. We don't want that because then there'll be no purpose. So we do have like a few levels of screening that. Okay, sure. I'm happy to connect you to Ben. Can you tell me what's it about? Just how you'll have like a virtual assistant. Right. So that virtual assistant also will transfer that call to you, but after it asks certain questions to make it a virtual, a verified and a valid call. So we can have those levels of. Unless you don't want that to be the case. Unless you want. Whoever asks for Ben, just get him to me. So that doesn't really. It defeats the purpose. But we can do that still, if you want.
 
 Speaker 3: 49:52 
 Yeah. And how does. How do we integrate it with the phone? Like right now, my cell phone number, it's still my personal number, but it's also the business number. I'm gonna. I am going to be getting a personal cell phone with a different phone number. Of course. Now I've got hundreds of contacts in. In this phone from family and friends, so I've got to transfer all that information over. But how do I get Clara to answer numbers that call into this phone? I must have to put an app on my phone or something. Right.
@@ -667,7 +669,7 @@ Speaker 3: 52:20
 Yeah. That's pretty cool. Okay. And so I don't need to get a new phone number, but I can.
 
 Speaker 1: 52:28 
-And we'll have that facilitated for you. And this is all on. And again, I don't want to get off track from here, but this is all for the office. We have a very comprehensive solution for your field guys as well. I just want you to know about it. I'm not going to go into too much depth because I don't want to overwhelm you. But you mentioned something which I picked up on where in that when you guys go out in the field, if they have any questions about a certain equipment or a certain job, they reach out to you. Yeah, we can optimize this workflow as well because we can have a ride along with them. What that means is we have a say. If you had a master technician, master technician with you at all times who's walking with you, and if you have any questions, you ask it and it responds. And similarly, you have an assistant walking besides you again and telling you what needs to be done. For example, you first speak to the customer builder, Apple, and understand what the job's all about. And then at the end, you probably try to upsell certain things which you usually miss out on because you're so focused on the work and certain of these checkpoints or a task list that you need to follow a checklist so that person will be responsible for telling you that. And third is if you're working on a very complex equipment, you're not really sure, so you need to call customer support of that company, Mr. Bushi, or any, any Bryant train, anywell, you call them and then they tell you so you can have another person like that helping you out. So all these three people combined together is what builds our field copilot.
+And we'll have that facilitated for you. And this is all on. And again, I don't want to get off track from here, but this is all for the office. We have a very comprehensive solution for your field guys as well. I just want you to know about it. I'm not going to go into too much depth because I don't want to overwhelm you. But you mentioned something which I picked up on where in that when you guys go out in the field, if they have any questions about a certain equipment or a certain job, they reach out to you. Yeah, we can optimize this workflow as well because we can have a ride along with them. What that means is we have a say. If you had a master technician, master electrician with you at all times who's walking with you, and if you have any questions, you ask it and it responds. And similarly, you have an assistant walking besides you again and telling you what needs to be done. For example, you first speak to the customer builder, Apple, and understand what the job's all about. And then at the end, you probably try to upsell certain things which you usually miss out on because you're so focused on the work and certain of these checkpoints or a task list that you need to follow a checklist so that person will be responsible for telling you that. And third is if you're working on a very complex equipment, you're not really sure, so you need to call customer support of that company, Mr. Bushi, or any, any Bryant train, anywell, you call them and then they tell you so you can have another person like that helping you out. So all these three people combined together is what builds our field copilot.
 
 Speaker 3: 54:10 
 Oh, okay, gotcha.
@@ -685,7 +687,7 @@ Speaker 3: 54:50
 Okay.
 
 Speaker 1: 54:51 
-So that's something for the guys. And the idea of Clara Dave is to have to be that one AI shop for Dave has. Any question comes to us, we mostly will have a solution for it. But in cases we don't, we'll build that for you. And that's another agent for us. And we build it specifically for the trades business. That's the only edge and the biggest edge that we have against a lot of other systems that we have built specifically for the trades.
+So that's something for the guys. And the idea of Clara Ben is to have to be that one AI shop for Ben has. Any question comes to us, we mostly will have a solution for it. But in cases we don't, we'll build that for you. And that's another agent for us. And we build it specifically for the trades business. That's the only edge and the biggest edge that we have against a lot of other systems that we have built specifically for the trades.
 
 Speaker 3: 55:17 
 Right. Very cool.
@@ -787,7 +789,7 @@ Speaker 3: 01:01:45
 Wow. Get to that end for the booking because Clara can book just a site visit or straight up a job. Now some tasks come in and it's, you know, going to be a two hour job. Some come in and it's going to be an eight hour job. Am I able to. There must be a way. She's pretty good to filter through those. So Clara knows when it can actually book the job as a service call and we can expect, you know, my tech to be there for an hour or two versus when it's going to be bigger and requires a site visit.
 
 Speaker 1: 01:02:20 
-It will be trained on that. So it will ask the questions and analyze if this is a job that would take longer in fact, if you call it right away and ask it, okay, how much time would this job take? Or how much time was this? I mean, how much time would a project take? It will tell you an estimated time and it would. And like I mentioned, the way you train it to answer it will. And just to clarify, Dave, like I said, we did have a booking feature which we have rolled back. Reason of rolling it back is because if you have something on your calendar from 1 to 3pm yeah, we're not sure that's going to end at exactly 3pm it might end at 2, it might end at 4.
+It will be trained on that. So it will ask the questions and analyze if this is a job that would take longer in fact, if you call it right away and ask it, okay, how much time would this job take? Or how much time was this? I mean, how much time would a project take? It will tell you an estimated time and it would. And like I mentioned, the way you train it to answer it will. And just to clarify, Ben, like I said, we did have a booking feature which we have rolled back. Reason of rolling it back is because if you have something on your calendar from 1 to 3pm yeah, we're not sure that's going to end at exactly 3pm it might end at 2, it might end at 4.
 
 Speaker 3: 01:02:55 
 Yeah.
@@ -865,7 +867,7 @@ Speaker 3: 01:06:36
 Yeah, no problem.
 
 Speaker 1: 01:06:40 
-Great. I think I have everything here. I'm just copying it at my end as well, just so I don't misplace anything. Okay. And when do we want to do the kickoff call? Dave.
+Great. I think I have everything here. I'm just copying it at my end as well, just so I don't misplace anything. Okay. And when do we want to do the kickoff call? Ben.
 
 Speaker 3: 01:06:54 
 Let me just grab.
@@ -895,7 +897,7 @@ Speaker 3: 01:08:11
 Yeah, that'll work.
 
 Speaker 1: 01:08:13 
-Yeah. One second. What I'll do is. Clara, kick off call for Dave's Electric Solutions. I've just sent you an invite. Dave, could you please confirm on Dave@Daveselectricsolutionsteam.com must have come from my name. Bharat. Yeah.
+Yeah. One second. What I'll do is. Clara, kick off call for Ben's Electric Solutions. I've just sent you an invite. Ben, could you please confirm on Ben@Benselectricsolutionsteam.com must have come from my name. Bharat. Yeah.
 
 Speaker 3: 01:08:33 
 Second. Nope, not up yet. Sometimes it takes a minute.
@@ -913,7 +915,7 @@ Speaker 3: 01:09:18
 But GST, yeah, we're going to charge.
 
 Speaker 1: 01:09:26 
-All up front for the three months. Yes. That's why we give you the flexibility of choosing the timeline. And we're not really signing you up in a one year contract or anything. That's why we're very flexible. But I'm sure after the three months you will be wanting to kind of renew it for a year. All year. And there's one thing that I'll do for you, Dave, specifically, and we do that for everybody, which is that on the contract that I'll share with you since it's going to be Like a contract wherein the timeline will be defined as 12 months. So after three months, if you decide to continue, which I'm sure you will, we'll keep this same price for you because our price might change in three months or five months or whatever. But we don't want to have you be paying the extra cost that might happen because this product was only at a different cost and now it's at a 249. And so the price. Yeah, we'll have that highlighted in the.
+All up front for the three months. Yes. That's why we give you the flexibility of choosing the timeline. And we're not really signing you up in a one year contract or anything. That's why we're very flexible. But I'm sure after the three months you will be wanting to kind of renew it for a year. All year. And there's one thing that I'll do for you, Ben, specifically, and we do that for everybody, which is that on the contract that I'll share with you since it's going to be Like a contract wherein the timeline will be defined as 12 months. So after three months, if you decide to continue, which I'm sure you will, we'll keep this same price for you because our price might change in three months or five months or whatever. But we don't want to have you be paying the extra cost that might happen because this product was only at a different cost and now it's at a 249. And so the price. Yeah, we'll have that highlighted in the.
 
 Speaker 3: 01:10:13 
 Gotcha. Yeah, I can give you my card right now.
@@ -934,7 +936,7 @@ Speaker 1: 01:10:27
 Okay, so I'll put in your name then. That should not be a problem.
 
 Speaker 3: 01:10:30 
-Yeah, you can put in Dave Penoyer.
+Yeah, you can put in Ben Penoyer.
 
 Speaker 1: 01:10:32 
 Great. And what would be the number?
@@ -961,13 +963,13 @@ Speaker 3: 01:11:49
 Terrific.
 
 Speaker 1: 01:11:50 
-Awesome. Any questions for me, Dave?
+Awesome. Any questions for me, Ben?
 
 Speaker 3: 01:11:52 
 No, not right now, but thank you so much.
 
 Speaker 1: 01:11:54 
-I had a very good time talking to you and we're really excited to show you what this can do. And in the three months, you'll be able to see so much revenue coming in which you didn't even know, which was fantastic. And, yeah, looking forward to growing together, Dave. And see you tomorrow on the kickoff call.
+I had a very good time talking to you and we're really excited to show you what this can do. And in the three months, you'll be able to see so much revenue coming in which you didn't even know, which was fantastic. And, yeah, looking forward to growing together, Ben. And see you tomorrow on the kickoff call.
 
 Speaker 3: 01:12:07 
 You bet. Thanks very much, Barrett.
@@ -980,3 +982,40 @@ You, too.
 
 Speaker 1: 01:12:11 
 Bye. Ending the meeting now.
+"""
+
+base_text = part1 + "\n\n" + part2
+
+# Customize combinations to ensure unique test data files
+datasets = [
+    ("demo_1.txt", "Ben", "Ben's Electric"),
+    ("demo_2.txt", "Mike", "Mike's Plumbing"),
+    ("demo_3.txt", "Sarah", "Sarah HVAC"),
+    ("demo_4.txt", "Dave", "Dave's Roofing"),
+    ("demo_5.txt", "Alex", "Elite Auto"),
+    ("onboarding_1.txt", "Ben", "Ben's Electric"),
+    ("onboarding_2.txt", "Mike", "Mike's Plumbing"),
+    ("onboarding_3.txt", "Sarah", "Sarah HVAC"),
+    ("onboarding_4.txt", "Dave", "Dave's Roofing"),
+    ("onboarding_5.txt", "Alex", "Elite Auto"),
+]
+
+data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
+os.makedirs(data_dir, exist_ok=True)
+
+for filename, client_name, company_name in datasets:
+    # Slightly modify the transcript for each file
+    modified_text = base_text.replace("Ben", client_name)
+    modified_text = modified_text.replace("ABC Company", company_name)
+    modified_text = modified_text.replace("electrical", "service")
+    modified_text = modified_text.replace("electrician", "technician")
+    
+    if "onboarding" in filename:
+        modified_text = modified_text.replace("demo of our platform", "onboarding steps for your account")
+        modified_text = modified_text.replace("Right now it's a demo.", "Right now we are going over the onboarding.")
+        
+    filepath = os.path.join(data_dir, filename)
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(modified_text)
+
+print("Created 10 large log transcript files.")

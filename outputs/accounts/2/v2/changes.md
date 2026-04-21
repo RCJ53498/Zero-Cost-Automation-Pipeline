@@ -1,16 +1,15 @@
 ## Changelog
 
-## Additions
-- Added "Routine inspections" to the list of services supported.
-- Added "Immediate safety hazard" to the emergency definition list.
-- Updated the timezone in the business hours configuration from "UTC-05:00" to "EST".
+### Additions
 
-## Modifications
-- Updated the non-emergency routing rules to include "Routine inspections" instead of just "Routine inspections to technician's cell phone".
+- **Updated questions_or_unknowns**: Added "Contractor's card details (name, number, CSC641.641)" to the list of questions or unknowns.
+- **Added new field to integration_constraints**: Clarified that integration constraints include CRM and contract management systems.
 
-## Removals
+### Modifications
+
+- **Updated emergency_routing_rules**: No changes were made to this section in V2 compared to V1.
+- **Updated non_emergency_routing_rules**: Added "Contractor's preferred contact method" to the existing value, which was previously a string. In V2, it is now a list of strings.
+
+### Removals
+
 - None
-
-## Notes
-- The notes section remains unchanged, still indicating a trial period for 2 months before committing to an annual plan.
-- The account_id remains the same, still set to "2".

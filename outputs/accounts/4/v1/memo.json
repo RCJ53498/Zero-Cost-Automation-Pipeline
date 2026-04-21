@@ -1,36 +1,36 @@
 {
-  "company_name": "HVAC Company",
+  "company_name": "Clara",
   "business_hours": {
     "days": "Monday to Friday",
-    "start": "02:00",
-    "end": "05:00",
-    "timezone": "UTC-5"
+    "start": "9:00 AM",
+    "end": "5:00 PM",
+    "timezone": "UTC-7"
   },
-  "office_address": "123 Main St, Anytown, USA",
+  "office_address": "Not specified",
   "services_supported": [
-    "Residential HVAC",
-    "Commercial HVAC"
+    "AI-powered solutions for trades and businesses",
+    "Contract management and renewal"
   ],
   "emergency_definition": [
-    "Critical AC failure"
+    "Contract cancellation or termination"
   ],
   "emergency_routing_rules": {
-    "behavior": "Escalate to priority",
-    "transfer_number": "1",
-    "fallback": "None"
+    "behavior": "Default to human support",
+    "transfer_number": "555-1234",
+    "fallback": "Automated response"
   },
-  "non_emergency_routing_rules": "None",
+  "non_emergency_routing_rules": "Route to solutions expert for contract management and renewal",
   "call_transfer_rules": {
     "timeout_seconds": 30,
     "retries": 1,
-    "failure_message": "No answer"
+    "failure_message": "Contract not found or invalid"
   },
-  "integration_constraints": "API access to connect Clara to custom internal dashboard",
-  "after_hours_flow_summary": "None",
-  "office_hours_flow_summary": "None",
+  "integration_constraints": "Integration with existing CRM systems only",
+  "after_hours_flow_summary": "Not applicable",
+  "office_hours_flow_summary": "Contract management and renewal process",
   "questions_or_unknowns": [
-    "What is the expected API access timeline?"
+    "What is the specific integration constraint for CRM systems?"
   ],
-  "notes": "None",
+  "notes": "Meeting notes and next steps",
   "account_id": "4"
 }

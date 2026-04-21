@@ -1,15 +1,15 @@
-## Changelog
+Here is the nicely formatted markdown changelog detailing exactly what changed, what was added, and what was removed:
+
+# Changelog
 
 ## Additions
-- Added `emergency_definition` to include specific emergency scenarios, such as "Complete power loss", "Sparking panels", and "Exposed live wires".
-- Updated `office_hours_flow_summary` to reflect the correct end time of 6pm.
 
-## Modifications
-- Updated `business_hours` to reflect the correct end time of 6pm.
-- Updated `emergency_routing_rules` to include a direct page to Ben at 555-7766 for emergencies.
+- Added empty list for `emergency_definition` in V2 configuration.
 
 ## Removals
-- Removed `integration_constraints` as it was not updated in V2.
 
-## Notes
-- No changes to `services_supported`, `emergency_routing_rules`, `non_emergency_routing_rules`, `call_transfer_rules`, `integration_constraints`, `after_hours_flow_summary`, `office_hours_flow_summary`, `questions_or_unknowns`, or `notes`.
+- Removed all empty or undefined values from `emergency_routing_rules`, `non_emergency_routing_rules`, `after_hours_flow_summary`, `office_hours_flow_summary`, and `notes` sections in both V1 and V2 configurations.
+
+## Modifications
+
+- No modifications were made to the existing data structures, only additions and removals of empty or undefined values.

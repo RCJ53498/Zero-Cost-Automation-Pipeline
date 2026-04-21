@@ -1,37 +1,37 @@
 {
-  "company_name": "Fire Protection Services",
+  "company_name": "Clara",
   "business_hours": {
     "days": "Monday to Friday",
-    "start": "08:00",
-    "end": "17:00",
-    "timezone": "UTC-05:00"
+    "start": "9:00 AM",
+    "end": "5:00 PM",
+    "timezone": "UTC-7"
   },
-  "office_address": "123 Main St, Anytown, USA",
+  "office_address": "Not specified",
   "services_supported": [
-    "Fire extinguisher inspections",
-    "Emergency suppression system triggers"
+    "AI-powered solutions for trades and businesses",
+    "Contract management and renewal"
   ],
   "emergency_definition": [
-    "Fire alarm triggered",
-    "Suppression system malfunction"
+    "Contractor's emergency contact information"
   ],
   "emergency_routing_rules": {
-    "behavior": "Route to on-call technician's cell phone",
-    "transfer_number": "None",
-    "fallback": "None"
+    "behavior": "Default routing to Bharat",
+    "transfer_number": "5526-1220-0052-4781",
+    "fallback": "Internal escalation process"
   },
-  "non_emergency_routing_rules": "Routine inspections to technician's cell phone",
+  "non_emergency_routing_rules": "Contractor's preferred contact method",
   "call_transfer_rules": {
     "timeout_seconds": 30,
     "retries": 1,
-    "failure_message": "No response from technician"
+    "failure_message": "Contractor not available"
   },
-  "integration_constraints": "Seamless integration with ServiceTrade for automatic logging of emergency triggers and scheduling of inspections",
-  "after_hours_flow_summary": "None",
-  "office_hours_flow_summary": "None",
+  "integration_constraints": "Integration with existing CRM and contract management systems",
+  "after_hours_flow_summary": "Not specified",
+  "office_hours_flow_summary": "Not specified",
   "questions_or_unknowns": [
-    "What is the expected volume of emergency calls during peak hours?"
+    "Contractor's address",
+    "Contractor's preferred contact method"
   ],
-  "notes": "Trial period for 2 months before committing to annual plan",
+  "notes": "Meeting notes and next steps",
   "account_id": "2"
 }
